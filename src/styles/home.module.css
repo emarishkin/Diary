@@ -1,0 +1,80 @@
+
+
+.homePage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  padding: 30px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.homePage a {
+  display: block;
+  width: 100%;
+  padding: 20px 40px;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  font-size: 1rem;
+  text-align: center;
+  transition: var(--transition);
+  box-shadow: var(--shadow-md);
+  border: none;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  font-family: "Pixelify Sans", sans-serif;
+}
+
+.homePage a:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+}
+
+/* Разные цвета для кнопок */
+.homePage a:nth-child(2) {
+  background: linear-gradient(135deg, var(--success) 0%, #00b4d8 100%);
+}
+
+.homePage a:nth-child(2):hover {
+  background: linear-gradient(135deg, #0096c7 0%, var(--success) 100%);
+}
+
+.homePage a:nth-child(3) {
+  background: linear-gradient(135deg, var(--warning) 0%, var(--secondary) 100%);
+}
+
+.homePage a:nth-child(3):hover {
+  background: linear-gradient(135deg, #e63946 0%, var(--warning) 100%);
+}
+
+/* Адаптив для мобилок */
+@media (max-width: 768px) {
+  .homePage {
+    padding: 10px;
+  }
+  
+  .container {
+    padding: 15px;
+    gap: 15px;
+    max-width: 75%;
+  }
+  
+  .homePage a {
+    padding: 16px 20px;
+    font-size: 0.9rem;
+    border-radius: 12px;
+  }
+}
