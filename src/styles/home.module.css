@@ -1,5 +1,3 @@
-
-
 .homePage {
   display: flex;
   align-items: center;
@@ -18,6 +16,46 @@
   max-width: 400px;
 }
 
+/* Стили для дива с дополнительными ссылками */
+.container > div {
+  width: 100%;
+  padding: 20px;
+  background: var(--bg-card);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-sm);
+  margin-top: 10px;
+}
+
+.container > div h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: var(--text-primary);
+  font-size: 1.2rem;
+}
+
+/* Стили для ссылок внутри дива */
+.container > div a {
+  display: block;
+  width: 100%;
+  padding: 12px 20px;
+  background: var(--bg-secondary);
+  color: var(--primary);
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-align: center;
+  transition: var(--transition);
+  border: 1px solid var(--primary);
+  margin-bottom: 10px;
+}
+
+.container > div a:hover {
+  background: var(--primary);
+  color: white;
+}
+
+/* Основные кнопки (первые 4) */
 .homePage a {
   display: block;
   width: 100%;
@@ -44,20 +82,20 @@
 }
 
 /* Разные цвета для кнопок */
-.homePage a:nth-child(2) {
-  background: linear-gradient(135deg, var(--success) 0%, #00b4d8 100%);
+.homePage a:nth-child(1) {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
 }
 
-.homePage a:nth-child(2):hover {
-  background: linear-gradient(135deg, #0096c7 0%, var(--success) 100%);
+.homePage a:nth-child(2) {
+  background: linear-gradient(135deg, var(--success) 0%, #00b4d8 100%);
 }
 
 .homePage a:nth-child(3) {
   background: linear-gradient(135deg, var(--warning) 0%, var(--secondary) 100%);
 }
 
-.homePage a:nth-child(3):hover {
-  background: linear-gradient(135deg, #e63946 0%, var(--warning) 100%);
+.homePage a:nth-child(4) {
+  background: linear-gradient(135deg, #9d4edd 0%, #560bad 100%);
 }
 
 /* Адаптив для мобилок */
@@ -77,4 +115,18 @@
     font-size: 0.9rem;
     border-radius: 12px;
   }
+  
+  .container > div {
+    padding: 15px;
+  }
+  
+  .container > div h2 {
+    font-size: 1.1rem;
+  }
+  
+  .container > div a {
+    padding: 10px 15px;
+    font-size: 0.85rem;
+  }
 }
+

@@ -1,3 +1,4 @@
 export const ROURES = {
-    HOME:'/'
+    HOME:'/',
+    TRAINING:'/training'
 }
